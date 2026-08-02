@@ -14,78 +14,60 @@ body{background:#eef2ef}
 .company h1{color:#0b6b2d;font-size:42px;margin-top:10px}
 .company p{color:#f08a00;font-size:24px}
 .card{max-width:900px;margin:25px auto;background:#fff;border:3px solid #0b6b2d;border-radius:25px;padding:25px;overflow:hidden}
-table{width:100%;border-collapse:collapse;table-layout:fixed}
-td,th{padding:12px;vertical-align:top;word-break:break-word;overflow-wrap:break-word}
-td:first-child{width:38%;font-weight:bold}
-.btns{text-align:center;margin-top:20px}
-button{background:#18a64b;color:#fff;border:none;padding:14px 32px;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer;margin:8px;white-space:normal}
-button:hover{background:#0b6b2d}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999}
-.modal-content{background:#fff;width:95%;max-width:1100px;margin:40px auto;padding:15px;border-radius:12px;box-sizing:border-box}
-.modal img{width:100%;height:auto;display:block}
-.close{float:right;font-size:32px;font-weight:bold;cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+.card-item{background:#f7f7f7;border:2px solid #d8e8dc;border-radius:18px;padding:16px;text-align:center}
+.card-item h3{color:#0b6b2d;margin-bottom:8px}
+.card-item a{display:inline-block;margin-top:10px;padding:10px 16px;background:#18a64b;color:#fff;border-radius:999px;text-decoration:none;font-weight:bold}
+.card-item a:hover{background:#0b6b2d}
 .footer{text-align:center;color:#666;padding:18px}
 @media(max-width:600px){
 .header{font-size:22px}
 .company h1{font-size:24px}
 .company p{font-size:18px}
-td{display:block;width:100%;padding:8px}
-td:first-child{width:100%;padding-bottom:2px}
-button{width:90%}
 }
 </style>
 </head>
 <body>
-
 <div class="header">PRODUCT INFORMATION</div>
-
 <div class="company">
 <img src="logo.png" alt="SGT Logo">
 <h1>SGT BIOTECHNOLOGIES</h1>
+<p>Explore product details and labels</p>
 </div>
-
 <div class="card">
-<table>
-<tr><td>Unique Identifier</td><td>SGT-ACE-2026-001</td></tr>
-<tr><td>Product Name</td><td><b>ACE GOLD</b></td></tr>
-<tr><td>Technical Name</td><td>Amino Acid 20%</td></tr>
-<tr><td>Batch Number</td><td>AG20001</td></tr>
-<tr><td>Mfg. Date</td><td>01/08/2026</td></tr>
-<tr><td>Exp. Date</td><td>31/07/2028</td></tr>
-<tr><td>Marketed By</td><td>SGT BIOTECHNOLOGIES</td></tr>
-<tr><td>Manufactured By</td><td>SGT BIOTECHNOLOGIES</td></tr>
-<tr><td>Customer Care</td><td>+91 9972012476</td></tr>
-</table>
-
-<div class="btns">
-<button onclick="openLabel()">View Label</button>
-<button onclick="window.open('leaflet.pdf','_blank')">View Leaflet</button>
+<div class="cards">
+<div class="card-item">
+<h3>ACE GOLD</h3>
+<p>SGT-ACE-2026-001</p>
+<a href="index.html">Open Page</a>
+</div>
+<div class="card-item">
+<h3>HUMICIL GROW</h3>
+<p>SGT-ACE-2026-003</p>
+<a href="humicil.html">Open Page</a>
+</div>
+<div class="card-item">
+<h3>PHYTOZYM</h3>
+<p>SGT-PHY-2026-001</p>
+<a href="PHYTOZYM.html">Open Page</a>
+</div>
+<div class="card-item">
+<h3>POTASH 20</h3>
+<p>SGT-POT-2026-001</p>
+<a href="potash20.html">Open Page</a>
+</div>
+<div class="card-item">
+<h3>Uday</h3>
+<p>Additional product info</p>
+<a href="uday.html">Open Page</a>
+</div>
+<div class="card-item">
+<h3>Leaflet</h3>
+<p>Supplementary info</p>
+<a href="leaflet.html">Open Page</a>
 </div>
 </div>
-
-<div id="labelModal" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeLabel()">&times;</span>
-<img src="label.jpg" alt="Product Label">
 </div>
-</div>
-
-<div class="footer">
-&copy; 2026 SGT Biotechnologies. All Rights Reserved.
-</div>
-
-<script>
-function openLabel(){
- document.getElementById('labelModal').style.display='block';
-}
-function closeLabel(){
- document.getElementById('labelModal').style.display='none';
-}
-window.onclick=function(e){
- const m=document.getElementById('labelModal');
- if(e.target===m){m.style.display='none';}
-}
-</script>
-
+<div class="footer">&copy; 2026 SGT Biotechnologies. All Rights Reserved.</div>
 </body>
 </html>

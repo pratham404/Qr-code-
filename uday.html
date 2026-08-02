@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,55 +36,38 @@ button{width:90%}
 </style>
 </head>
 <body>
-
 <div class="header">PRODUCT INFORMATION</div>
-
 <div class="company">
 <img src="logo.png" alt="SGT Logo">
 <h1>SGT BIOTECHNOLOGIES</h1>
 </div>
-
 <div class="card">
 <table>
-<tr><td>Unique Identifier</td><td>SGT-PHY-2026-001</td></tr>
-<tr><td>Product Name</td><td><b>PHYTOZYM 100ml</b></td></tr>
-<tr><td>Technical Name</td><td>Sargassum Tenerrimum 10% (Liquid)</td></tr>
-<tr><td>Batch Number</td><td>PH01</td></tr>
-<tr><td>Mfg. Date</td><td>17/07/2026</td></tr>
-<tr><td>Exp. Date</td><td>16/07/2029</td></tr>
+<tr><td>Unique Identifier</td><td>SGT-UDAY-2026-001</td></tr>
+<tr><td>Product Name</td><td><b>UDAY PRODUCT</b></td></tr>
+<tr><td>Technical Name</td><td>Biostimulant Formulation</td></tr>
+<tr><td>Batch Number</td><td>UD01</td></tr>
+<tr><td>Mfg. Date</td><td>01/08/2026</td></tr>
+<tr><td>Exp. Date</td><td>31/07/2028</td></tr>
 <tr><td>Marketed By</td><td>SGT BIOTECHNOLOGIES</td></tr>
 <tr><td>Manufactured By</td><td>SGT BIOTECHNOLOGIES</td></tr>
 <tr><td>Customer Care</td><td>+91 9972012476</td></tr>
 </table>
-
 <div class="btns">
-<button onclick="openLabel()" style="display:block;margin:0 auto">View Label</button>
+<button onclick="openLabel()">View Label</button>
 </div>
 </div>
-
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
-<img src="Screenshot (3).png" alt="Product Label">
+<img src="label.jpg" alt="Product Label">
 </div>
 </div>
-
-<div class="footer">
-&copy; 2026 SGT Biotechnologies. All Rights Reserved.
-</div>
-
+<div class="footer">&copy; 2026 SGT Biotechnologies. All Rights Reserved.</div>
 <script>
-function openLabel(){
- document.getElementById('labelModal').style.display='block';
-}
-function closeLabel(){
- document.getElementById('labelModal').style.display='none';
-}
-window.onclick=function(e){
- const m=document.getElementById('labelModal');
- if(e.target===m){m.style.display='none';}
-}
+function openLabel(){ document.getElementById('labelModal').style.display='block'; }
+function closeLabel(){ document.getElementById('labelModal').style.display='none'; }
+window.onclick=function(e){ const m=document.getElementById('labelModal'); if(e.target===m){m.style.display='none';} }
 </script>
-
 </body>
 </html>
