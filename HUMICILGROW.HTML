@@ -65,7 +65,7 @@ button{width:90%}
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
-<img id="labelImage" src="/workspaces/Qr-code-/Screenshot 2026-06-21 131741.jpg" alt="Product Label" onerror="handleImageError()">
+<img id="labelImage" src="Screenshot 2026-06-21 131741.jpg" alt="Product Label" onerror="handleImageError()">
 </div>
 </div>
 
@@ -81,12 +81,12 @@ function closeLabel(){
 function handleImageError(){
 	const img=document.getElementById('labelImage');
 	if(img) img.style.display='none';
-	alert('Label image failed to load (potash20.png). Please check the file name or upload the image to the repository.');
+	alert('Label image failed to load (Screenshot 2026-06-21 131741.jpg). Please check the file path.');
 	document.getElementById('labelModal').style.display='none';
 }
 
 function openLabel(){
-	const src = 'potash20.png';
+	const src = 'Screenshot 2026-06-21 131741.jpg';
 	const test = new Image();
 	test.onload = function(){ document.getElementById('labelModal').style.display='block'; };
 	test.onerror = function(){ handleImageError(); };
