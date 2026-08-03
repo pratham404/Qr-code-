@@ -50,10 +50,10 @@ button{width:90%}
 <table>
 <tr><td>Unique Identifier</td><td>SGT-LP-2026-001</td></tr>
 <tr><td>Product Name</td><td><b>LEGEND POSHAK 250ml</b></td></tr>
-<tr><td>Technical Name</td><td>Micro nutrient fertilizer mixture</td></tr>
-<tr><td>Batch Number</td><td>PH01/2627</td></tr>
-<tr><td>Mfg. Date</td><td>06/07/2026</td></tr>
-<tr><td>Exp. Date</td><td>05/07/2029</td></tr>
+<tr><td>Technical Name</td><td>MICRO NUTRIENT FERTILIZER MIXTURE</td></tr>
+<tr><td>Batch Number</td><td>KNS011</td></tr>
+<tr><td>Mfg. Date</td><td>20/08/2025</td></tr>
+<tr><td>Exp. Date</td><td>19/08/2028</td></tr>
 <tr><td>Marketed By</td><td>SGT BIOTECHNOLOGIES</td></tr>
 <tr><td>Manufactured By</td><td>SGT BIOTECHNOLOGIES</td></tr>
 <tr><td>Customer Care</td><td>+91 9972012476</td></tr>
@@ -67,7 +67,7 @@ button{width:90%}
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
-<img id="labelImage" src="phytozym.jpeg" alt="Product Label">
+<img id="labelImage" src="LEGEND POSHAK 250ML.jpeg" alt="Product Label">
 </div>
 </div>
 
@@ -78,7 +78,7 @@ button{width:90%}
 <script>
 function openLabel(){
  const img=document.getElementById('labelImage');
- if(img){ img.src='phytozym.jpeg?v=2'; }
+ if(img){ img.src='LEGEND POSHAK 250ML.jpeg?v=2'; }
  document.getElementById('labelModal').style.display='block';
 }
 function closeLabel(){
