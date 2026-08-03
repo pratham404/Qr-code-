@@ -36,14 +36,11 @@ button{width:90%}
 </style>
 </head>
 <body>
-
 <div class="header">PRODUCT INFORMATION</div>
-
 <div class="company">
 <img src="logo.png" alt="SGT Logo">
 <h1>SGT BIOTECHNOLOGIES</h1>
 </div>
-
 <div class="card">
 <table>
 <tr><td>Unique Identifier</td><td>SGT-POT-2026-002</td></tr>
@@ -56,48 +53,22 @@ button{width:90%}
 <tr><td>Manufactured By</td><td>SGT BIOTECHNOLOGIES</td></tr>
 <tr><td>Customer Care</td><td>+91 9972012476</td></tr>
 </table>
-
 <div class="btns">
 <button onclick="openLabel()" style="display:block;margin:0 auto">View Label</button>
 </div>
 </div>
-
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
 <img id="labelImage" src="IMG-20260803-WA0000.jpg.jpeg" alt="Product Label" onerror="handleImageError()">
 </div>
 </div>
-
-<div class="footer">
-&copy; 2026 SGT Biotechnologies. All Rights Reserved.
-</div>
-
+<div class="footer">&copy; 2026 SGT Biotechnologies. All Rights Reserved.</div>
 <script>
-function closeLabel(){
-	document.getElementById('labelModal').style.display='none';
-}
-
-function handleImageError(){
-	const img=document.getElementById('labelImage');
-	if(img) img.style.display='none';
-	alert('Label image failed to load (IMG-20260803-WA0000.jpg.jpeg). Please check the file name or upload the image to the repository.');
-	document.getElementById('labelModal').style.display='none';
-}
-
-function openLabel(){
-	const src = 'IMG-20260803-WA0000.jpg.jpeg';
-	const test = new Image();
-	test.onload = function(){ document.getElementById('labelModal').style.display='block'; };
-	test.onerror = function(){ handleImageError(); };
-	test.src = src;
-}
-
-window.onclick=function(e){
- const m=document.getElementById('labelModal');
- if(e.target===m){m.style.display='none';}
-}
+function closeLabel(){document.getElementById('labelModal').style.display='none';}
+function handleImageError(){const img=document.getElementById('labelImage'); if(img) img.style.display='none'; alert('Label image failed to load.'); document.getElementById('labelModal').style.display='none';}
+function openLabel(){const src='IMG-20260803-WA0000.jpg.jpeg'; const test=new Image(); test.onload=function(){document.getElementById('labelModal').style.display='block';}; test.onerror=function(){handleImageError();}; test.src=src;}
+window.onclick=function(e){const m=document.getElementById('labelModal'); if(e.target===m){m.style.display='none';}}
 </script>
-
 </body>
 </html>
