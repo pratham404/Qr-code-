@@ -17,7 +17,7 @@ body{background:#eef2ef}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 td,th{padding:12px;vertical-align:top;word-break:break-word;overflow-wrap:break-word}
 td:first-child{width:38%;font-weight:bold}
-.btns{text-align:center;margin-top:20px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 button{background:#18a64b;color:#fff;border:none;padding:14px 32px;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer;margin:8px;white-space:normal}
 button:hover{background:#0b6b2d}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999}
@@ -33,6 +33,7 @@ td{display:block;width:100%;padding:8px}
 td:first-child{width:100%;padding-bottom:2px}
 button{width:90%}
 }
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 .modal-content{max-height:90vh;overflow:auto}
 .modal img{max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:0 auto}
 </style>
@@ -60,8 +61,8 @@ button{width:90%}
 </table>
 
 <div class="btns">
-<button onclick="openLabel()" style="display:block;margin:0 auto">View Label</button>
-<button onclick="openQRCode()" style="display:block;margin:0 auto">QR-code</button>
+<button onclick="openLabel()">View Label</button>
+<button onclick="openQRCode()">QR-code</button>
 </div>
 </div>
 
@@ -90,7 +91,7 @@ window.onclick=function(e){
  if(e.target===m){m.style.display='none';}
 }
 function openQRCode(){
- window.location.href='qr-code.html';
+ window.location.href='https://pratham404.github.io/Qr-code-/qr-code.html?url=' + encodeURIComponent('https://pratham404.github.io/Qr-code-/legend-poshak-500ml.html');
 }
 </script>
 

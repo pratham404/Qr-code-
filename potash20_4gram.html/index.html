@@ -17,7 +17,7 @@ body{background:#eef2ef}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 td,th{padding:12px;vertical-align:top;word-break:break-word;overflow-wrap:break-word}
 td:first-child{width:38%;font-weight:bold}
-.btns{text-align:center;margin-top:20px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 button{background:#18a64b;color:#fff;border:none;padding:14px 32px;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer;margin:8px;white-space:normal}
 button:hover{background:#0b6b2d}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999}
@@ -54,7 +54,8 @@ button{width:90%}
 <tr><td>Customer Care</td><td>+91 9972012476</td></tr>
 </table>
 <div class="btns">
-<button onclick="openLabel()" style="display:block;margin:0 auto">View Label</button>
+<button onclick="openLabel()">View Label</button>
+<button onclick="openQRCode()">QR-code</button>
 </div>
 </div>
 <div id="labelModal" class="modal">
@@ -68,6 +69,7 @@ button{width:90%}
 function closeLabel(){document.getElementById('labelModal').style.display='none';}
 function handleImageError(){const img=document.getElementById('labelImage'); if(img) img.style.display='none'; alert('Label image failed to load.'); document.getElementById('labelModal').style.display='none';}
 function openLabel(){const src='https://raw.githubusercontent.com/pratham404/Qr-code-/main/IMG-20260803-WA0000.jpg.jpeg'; const test=new Image(); test.onload=function(){document.getElementById('labelModal').style.display='block';}; test.onerror=function(){handleImageError();}; test.src=src;}
+function openQRCode(){window.location.href='https://pratham404.github.io/Qr-code-/qr-code.html?url=' + encodeURIComponent('https://pratham404.github.io/Qr-code-/potash20_4gram.html/index.html');}
 window.onclick=function(e){const m=document.getElementById('labelModal'); if(e.target===m){m.style.display='none';}}
 </script>
 </body>

@@ -19,8 +19,21 @@ body{display:flex;flex-direction:column;align-items:center;justify-content:cente
 <div class="card">
 <h1>QR-code</h1>
 <p>Scan this QR code for the product page.</p>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://pratham404.github.io/Qr-code-/legend-poshak-500ml.html" alt="LEGEND POSHAK 500ml QR-code">
-<a href="legend-poshak-500ml.html">Back to product</a>
+<img id="qrImage" src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://pratham404.github.io/Qr-code-/legend-poshak-500ml.html" alt="Product QR-code">
+<a id="backLink" href="legend-poshak-500ml.html">Back to product</a>
 </div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const productUrl = params.get('url') || 'https://pratham404.github.io/Qr-code-/legend-poshak-500ml.html';
+const qrImage = document.getElementById('qrImage');
+const backLink = document.getElementById('backLink');
+if (qrImage) {
+  qrImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=' + encodeURIComponent(productUrl);
+  qrImage.alt = 'Product QR-code';
+}
+if (backLink) {
+  backLink.href = productUrl;
+}
+</script>
 </body>
 </html>
