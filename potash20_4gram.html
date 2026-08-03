@@ -60,14 +60,14 @@ button{width:90%}
 <div id="labelModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeLabel()">&times;</span>
-<img id="labelImage" src="IMG-20260803-WA0000.jpg.jpeg" alt="Product Label" onerror="handleImageError()">
+<img id="labelImage" src="https://raw.githubusercontent.com/pratham404/Qr-code-/main/IMG-20260803-WA0000.jpg.jpeg" alt="Product Label" onerror="handleImageError()">
 </div>
 </div>
 <div class="footer">&copy; 2026 SGT Biotechnologies. All Rights Reserved.</div>
 <script>
 function closeLabel(){document.getElementById('labelModal').style.display='none';}
 function handleImageError(){const img=document.getElementById('labelImage'); if(img) img.style.display='none'; alert('Label image failed to load.'); document.getElementById('labelModal').style.display='none';}
-function openLabel(){const src='IMG-20260803-WA0000.jpg.jpeg'; const test=new Image(); test.onload=function(){document.getElementById('labelModal').style.display='block';}; test.onerror=function(){handleImageError();}; test.src=src;}
+function openLabel(){const src='https://raw.githubusercontent.com/pratham404/Qr-code-/main/IMG-20260803-WA0000.jpg.jpeg'; const test=new Image(); test.onload=function(){document.getElementById('labelModal').style.display='block';}; test.onerror=function(){handleImageError();}; test.src=src;}
 window.onclick=function(e){const m=document.getElementById('labelModal'); if(e.target===m){m.style.display='none';}}
 </script>
 </body>
