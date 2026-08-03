@@ -61,6 +61,7 @@ button{width:90%}
 
 <div class="btns">
 <button onclick="openLabel()" style="display:block;margin:0 auto">View Label</button>
+<button onclick="openQRCode()" style="display:block;margin:0 auto">QR-code</button>
 </div>
 </div>
 
@@ -87,6 +88,9 @@ function closeLabel(){
 window.onclick=function(e){
  const m=document.getElementById('labelModal');
  if(e.target===m){m.style.display='none';}
+}
+function openQRCode(){
+ window.location.href='qr-code.html';
 }
 </script>
 
