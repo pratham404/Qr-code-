@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -50,7 +50,7 @@ button{width:90%}
 <div class="card">
 <table>
 <tr><td>Unique Identifier</td><td>SGT-LP-2026-003</td></tr>
-<tr><td>Product Name</td><td><b>LEGEND POSHAK 1LT</b></td></tr>
+<tr><td>Product Name</td><td><b>LEGEND POSHAK 1lt</b></td></tr>
 <tr><td>Technical Name</td><td>MICRO NUTRIENT FERTILIZER MIXTURE</td></tr>
 <tr><td>Batch Number</td><td>KNS013</td></tr>
 <tr><td>Mfg. Date</td><td>20/08/2025</td></tr>
@@ -91,7 +91,7 @@ window.onclick=function(e){
  if(e.target===m){m.style.display='none';}
 }
 function openQRCode(){
- window.location.href='https://pratham404.github.io/Qr-code-/qr-code.html?url=' + encodeURIComponent('https://pratham404.github.io/Qr-code-/legend-poshak-500ml.html');
+ window.location.href='https://pratham404.github.io/Qr-code-/qr-code.html?url=' + encodeURIComponent('https://pratham404.github.io/Qr-code-/legend poshak 1lt.html');
 }
 </script>
 
