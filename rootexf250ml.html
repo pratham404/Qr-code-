@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGT Biotechnologies - ROOTEX F 250ML</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2ef;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #0b6b2d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .company {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .company img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+        }
+
+        .company h2 {
+            color: #0b6b2d;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            color: #f08a00;
+            font-weight: bold;
+        }
+
+        .card {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border: 2px solid #0b6b2d;
+            border-radius: 25px;
+            padding: 25px;
+            width: 90%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 13px;
+            border-bottom: 1px solid #ddd;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: #0b6b2d;
+            width: 40%;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            background: #0b6b2d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #084d20;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: auto;
+            text-align: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            td {
+                padding: 10px 5px;
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        PRODUCT INFORMATION
+    </header>
+
+    <div class="company">
+        <img src="logo.png" alt="SGT Logo">
+        <h2>SGT BIOTECHNOLOGIES</h2>
+        <p class="subtitle">Quality Agricultural Solutions</p>
+    </div>
+
+    <div class="card">
+        <table>
+            <tr>
+                <td>Unique Identifier</td>
+                <td>SGT-RF-2026-002</td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td>ROOTEX F 250ML</td>
+            </tr>
+            <tr>
+                <td>Technical Name</td>
+                <td>HUMATES AND FULVATES-22% LIQUID</td>
+            </tr>
+            <tr>
+                <td>Batch Number</td>
+                <td>RF02</td>
+            </tr>
+            <tr>
+                <td>Mfg. Date</td>
+                <td>NOV 2026</td>
+            </tr>
+            <tr>
+                <td>Exp. Date</td>
+                <td>NOV 2029</td>
+            </tr>
+            <tr>
+                <td>Marketed By</td>
+                <td>SGT BIOTECHNOLOGIES</td>
+            </tr>
+            <tr>
+                <td>Manufactured By</td>
+                <td>SGT BIOTECHNOLOGIES</td>
+            </tr>
+            <tr>
+                <td>Customer Care</td>
+                <td>+91 9972012476</td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <button onclick="openLabel()">View Label</button>
+            <button onclick="openQR()">QR-code</button>
+        </div>
+    </div>
+
+    <div class="modal" id="labelModal" onclick="closeLabel(event)">
+        <div class="modal-content">
+            <span class="close" onclick="closeLabel(event)">&times;</span>
+            <img id="labelImage"
+                 src=""
+                 alt="ROOTEX F 250ML Label"
+                 onerror="handleImageError()">
+        </div>
+    </div>
+
+    <footer>
+        © 2026 SGT Biotechnologies. All Rights Reserved.
+    </footer>
+
+    <script>
+        function openLabel() {
+            const image = document.getElementById("labelImage");
+            image.src = "rootexf250ml.jpeg";
+            document.getElementById("labelModal").style.display = "flex";
+        }
+
+        function closeLabel(event) {
+            if (
+                event.target.id === "labelModal" ||
+                event.target.classList.contains("close")
+            ) {
+                document.getElementById("labelModal").style.display = "none";
+            }
+        }
+
+        function handleImageError() {
+            document.getElementById("labelModal").style.display = "none";
+            alert("Label image not found. Please upload rootexf250ml.jpeg");
+        }
+
+        function openQR() {
+            const productURL =
+                "https://pratham404.github.io/Qr-code-/rootexf250ml.html";
+
+            window.location.href =
+                "https://pratham404.github.io/Qr-code-/qr-code.html?url=" +
+                encodeURIComponent(productURL);
+        }
+    </script>
+
+</body>
+</html>
